@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { IoMdCloseCircle } from "react-icons/io";
+
 import large0 from '../../assets/forest01.png';
 import large1 from '../../assets/forest02.png';
 import large2 from '../../assets/forest03.png';
@@ -8,6 +10,8 @@ import small0 from '../../assets/forest01s.png';
 import small1 from '../../assets/forest02s.png';
 import small2 from '../../assets/forest03s.png';
 
+import { Box, UlBigBox } from './Modalka04.styled';
+ 
 export const Modalka04 = () =>{
 
     const arr = [
@@ -29,26 +33,35 @@ export const Modalka04 = () =>{
 const List = ( { list } ) =>{
 
 const [ imgState, setImgState ] = useState(null);
+debugger;
 
     return (
-        <ul>
+       
+            <UlBigBox>
         {
-            list.map(( itm, idx) => {
+            list.map(( itm, idx ) => {
+
+                debugger;
+                
                 return <OneItem 
-                        key = {itm[`small${idx}`]}
-                        url = {itm[`small${idx}`]}
-                        largeUrl = {itm[`large${idx}`]}
-                        toOpen = {() => setImgState(itm[`large${idx}`])}
-                        flagImg = {imgState === itm[`large${idx}`]}
+                        key =       {itm[`small${idx}`]}
+                        url =       {itm[`small${idx}`]}
+                        largeUrl =  {itm[`large${idx}`]}
+                        toOpen =    {() =>{
+                            debugger;
+                            setImgState(itm[`large${idx}`])
+                        } }
+                        toClose =   {() => setImgState(null)}
+                        flagImg =   {imgState === itm[`large${idx}`]}
                         />
             })
         }
-        </ul>
+            </UlBigBox>
+       
     )
-
 };
 
-const OneItem = ({ url, toOpen, largeUrl, flagImg}) =>{
+const OneItem = ({ url, toOpen, toClose, largeUrl, flagImg}) =>{
         return <li>
                     <div onClick = { toOpen }>
                     <img src = { url } alt ="forest"/>
@@ -57,15 +70,18 @@ const OneItem = ({ url, toOpen, largeUrl, flagImg}) =>{
                     {
                        flagImg
                        &&
-                       <Modal url={largeUrl}/>
-                        
+                       <Modal url={largeUrl} closeBtn ={toClose}/>
                     }
-            
                 </li>
-
 }
 
-const Modal = ( {url} ) =>{
-    return <img src = {url} alt = "forest"/>
+const Modal = ( {url, closeBtn} ) => {
+    return <Box>
+                <img src = {url} alt = "forest"/>
+                <span onClick = { closeBtn }>
+                   <IoMdCloseCircle />
+                </span>
+           </Box>
+   
 }
 
