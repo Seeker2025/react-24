@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-24/static/css/main.7101d77d.css",
-    "main.js": "/react-24/static/js/main.0a15a861.js",
+    "main.css": "/react-24/static/css/main.b27527e8.css",
+    "main.js": "/react-24/static/js/main.bf059ef5.js",
     "static/media/forest01.png": "/react-24/static/media/forest01.4000647715386ff5c0d4.png",
     "static/media/forest02.png": "/react-24/static/media/forest02.6af7340332cf8dc3118d.png",
     "static/media/forest03.png": "/react-24/static/media/forest03.2105ffcab4d74d377388.png",
@@ -9,11 +9,11 @@
     "static/media/forest01s.png": "/react-24/static/media/forest01s.4063381b5ad98055f6da.png",
     "static/media/forest03s.png": "/react-24/static/media/forest03s.be74caa357685697e61e.png",
     "index.html": "/react-24/index.html",
-    "main.7101d77d.css.map": "/react-24/static/css/main.7101d77d.css.map",
-    "main.0a15a861.js.map": "/react-24/static/js/main.0a15a861.js.map"
+    "main.b27527e8.css.map": "/react-24/static/css/main.b27527e8.css.map",
+    "main.bf059ef5.js.map": "/react-24/static/js/main.bf059ef5.js.map"
   },
   "entrypoints": [
-    "static/css/main.7101d77d.css",
-    "static/js/main.0a15a861.js"
+    "static/css/main.b27527e8.css",
+    "static/js/main.bf059ef5.js"
   ]
 }
