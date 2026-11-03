@@ -10,12 +10,13 @@ export const Box = styled.div`
     position: absolute;
     top: 0px;
     right: 300px;
+    /* border: 1px solid red; */
 /* позиционируем span относительно Box */
         span {
             position: absolute;
             top: 0px;
             right: -30px;
-            color: #ff3b3b;
+            color: #dbdbdb;
             font-size: 1.7em;
         }
 `;

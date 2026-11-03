@@ -51,7 +51,10 @@ debugger;
                             debugger;
                             setImgState(itm[`large${idx}`])
                         } }
-                        toClose =   {() => setImgState(null)}
+                        toClose =   {() => {
+                            debugger;
+                            setImgState(null)
+                        }}
                         flagImg =   {imgState === itm[`large${idx}`]}
                         />
             })
@@ -72,7 +75,7 @@ const OneItem = ({ url, toOpen, toClose, largeUrl, flagImg}) =>{
                        &&
                        <Modal url={largeUrl} closeBtn ={toClose}/>
                     }
-                </li>
+               </li>
 }
 
 const Modal = ( {url, closeBtn} ) => {
@@ -82,6 +85,5 @@ const Modal = ( {url, closeBtn} ) => {
                    <IoMdCloseCircle />
                 </span>
            </Box>
-   
 }
 
